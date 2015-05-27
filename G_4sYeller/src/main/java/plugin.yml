@@ -4,11 +4,11 @@ version: 0.2
 
 commands:
     yell:
-        description: This command yells in form of a title.
         usage: /yell [title](*SPACE* , *SPACE* [subtitle])
         usage: /yell [subtitle] -t
         permission: G_4sYeller.yell
         permission-message: You don't have <permission>
+        description: This command yells in form of a title.
 permissions:
     G_4sYeller.yell:
         description: Gives permission to the yell command.

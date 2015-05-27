@@ -13,4 +13,3 @@ permissions:
     G_4sYeller.yell:
         description: Gives permission to the yell command.
         
-    

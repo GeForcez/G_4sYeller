@@ -36,12 +36,12 @@ public final class G_4sYeller extends JavaPlugin implements CommandExecutor{
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 	sender send = new sender();
-        if (cmd.getName().equalsIgnoreCase("yell") && (args.length != 0 || !args[0].equalsIgnoreCase("help"))) {
+        if (cmd.getName().equalsIgnoreCase("yell") && args.length != 0 && !args[0].equalsIgnoreCase("help") && !args[0].equalsIgnoreCase("about")) {
             int i = 0;
             String s = ",";
             String header = "";
             String footer = "";
-            if ((s.equalsIgnoreCase(args[0]) || args[0].isEmpty() || !Arrays.asList(args).contains(",")) && !Arrays.asList(args).contains("-t")) {
+            if ((s.equalsIgnoreCase(args[0]) || args[0].isEmpty()) && !Arrays.asList(args).contains("-t")) {
                 sender.sendMessage(translateAlternateColorCodes('&', "&4invalid input '/yell [title] SPACE , SPACE [subtitle]'"));
                 sender.sendMessage(translateAlternateColorCodes('&', "&4Or '/yell [title]'  or '/yell [subtitle] -h' for no title."));
             } else if (args[args.length - 1 ].equalsIgnoreCase("-t")) {
@@ -73,7 +73,7 @@ public final class G_4sYeller extends JavaPlugin implements CommandExecutor{
                 send.sendTitle(header, footer);
             }
             return true;
-	} else if (cmd.getName().equalsIgnoreCase("yell") && (args.length == 0 || args[0].equalsIgnoreCase("help"))){
+	} else if (cmd.getName().equalsIgnoreCase("yell") && args.length != 0 && (args[0].equalsIgnoreCase("help") || args[0].equalsIgnoreCase("about"))){
             if (args[0].equalsIgnoreCase("help")) {
                 if (!(sender instanceof Player)) {
 			sender.sendMessage("This command can only be run by a player.");
@@ -97,6 +97,14 @@ public final class G_4sYeller extends JavaPlugin implements CommandExecutor{
                         sender.sendMessage(ChatColor.GREEN + "---------------End of about page---------------");
 		}
             }
+            return true;
+        } else if (cmd.getName().equalsIgnoreCase("yell")){
+            sender.sendMessage(ChatColor.GREEN + "----------------[G_4s Yeller]-----------------");
+            sender.sendMessage(ChatColor.GREEN + "This is the help page of this command.");
+            sender.sendMessage(ChatColor.GREEN + "'/yell [title] , [subtitle]'  yells in form of a title and subtitle.");
+            sender.sendMessage(ChatColor.GREEN + "'/yell [title]'  yells in form of a title.");
+            sender.sendMessage(ChatColor.GREEN + "'/yell [subtitle] -t'  yells in form of a subtitle.");
+            sender.sendMessage(ChatColor.GREEN + "---------------End of help page---------------");
             return true;
         }
 	return false; 

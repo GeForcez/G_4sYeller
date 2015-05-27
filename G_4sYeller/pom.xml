@@ -24,8 +24,8 @@
     </build>
     <repositories>
         <repository>
-                    <id>spigot-repo</id>
-                    <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
         </repository>
         <!--Spigot-API-->
     </repositories>
@@ -40,12 +40,6 @@
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
             <version>1.8.6-R0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.8.3-R0.1-SNAPSHOT</version>
-            <type>jar</type>
         </dependency>
     </dependencies>
     <name>G_4sYeller</name>

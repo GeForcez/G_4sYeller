@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.G_4s</groupId>
     <artifactId>G_4sYeller</artifactId>
-    <version>1.0-notYetBeta</version>
+    <version>1.0-OfficialRelease</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,6 +30,11 @@
         <!--Spigot-API-->
     </repositories>
     <dependencies>
+        <dependency>
+          <groupId>org.spigotmc</groupId>
+          <artifactId>spigot</artifactId>
+          <version>1.8.6-R0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
           <groupId>org.spigotmc</groupId>
           <artifactId>spigot-api</artifactId>

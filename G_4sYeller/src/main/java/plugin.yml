@@ -1,6 +1,6 @@
-name: G_4sYeller
+name: Yeller
 main: com.GeForce.G_4sYeller.G_4sYeller
-version: 0.2
+version: 1.0
 
 commands:
     yell:
@@ -10,6 +10,6 @@ commands:
         permission-message: You don't have <permission>
         description: This command yells in form of a title.
 permissions:
-    G_4sYeller.yell:
+    Yeller.yell:
         description: Gives permission to the yell command.
         

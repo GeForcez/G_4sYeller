@@ -12,8 +12,8 @@ import org.bukkit.entity.Player;
  *
  * @author maxime
  */
-public class sender {
-    public sender() {
+public class PacketSender {
+    public PacketSender() {
     }
     public static void sendTitle(String title, String subtitle) {
         for (Player player : Bukkit.getServer().getOnlinePlayers()) {

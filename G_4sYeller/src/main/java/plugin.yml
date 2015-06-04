@@ -1,15 +1,28 @@
 name: Yeller
 main: com.GeForce.G_4sYeller.G_4sYeller
-version: 1.0
+version: 1.1
 
 commands:
     yell:
-        usage: /yell [title](*SPACE* , *SPACE* [subtitle])
-        usage: /yell [subtitle] -t
-        permission: G_4sYeller.yell
-        permission-message: You don't have <permission>
-        description: This command yells in form of a title.
+        usage: /yell [title],[subtitle]
+        permission: Yeller.yell
+        permission-message: You don't have Yell powers permission.
+        description: This command yells title and subtitle
+    yellt:
+        usage: /yellt [title]
+        permission: Yeller.yellt
+        permission-message: You don't have Yell powers permission.
+        description: This command yells a title.
+    yells:
+        usage: /yells [subtitle]
+        permission: Yeller.yells
+        permission-message: You don't have Yell powers permission.
+        description: This command yells a subtitle.
 permissions:
     Yeller.yell:
         description: Gives permission to the yell command.
+    Yeller.yellt:
+        description: Gives permission to the title yell command.
+    Yeller.yells:
+        description: Gives permission to the subtitle yell command. 
         

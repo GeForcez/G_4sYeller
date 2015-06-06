@@ -45,10 +45,10 @@ public final class G_4sYeller extends JavaPlugin implements CommandExecutor{
             String[] strings = string.split(",");
             send.sendTitle(strings[0], strings[1]);
             return true;
-	} else if (cmd.getName().equalsIgnoreCase("yellt")  && args.length != 0 && !args[0].equalsIgnoreCase("help") && !args[0].equalsIgnoreCase("about") && !string.contains(",")){
+	} else if (cmd.getName().equalsIgnoreCase("yellt") && args.length != 0 && !string.contains(",")){
             send.sendTitle(string, "");
             return true;
-	} else if (cmd.getName().equalsIgnoreCase("yells")){
+	} else if (cmd.getName().equalsIgnoreCase("yells") && args.length != 0 && !string.contains(",")){
             send.sendTitle("", string);
             return true;
         } else if (cmd.getName().equalsIgnoreCase("yell") && args.length != 0 && args.length < 2 && (args[0].equalsIgnoreCase("help") || args[0].equalsIgnoreCase("about")) && !string.contains(",")) {

@@ -3,6 +3,7 @@ package com.GeForce.G_4sYeller;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -42,14 +43,26 @@ public final class G_4sYeller extends JavaPlugin implements CommandExecutor{
             }       
         }
         if (cmd.getName().equalsIgnoreCase("yell") && args.length != 0 && !args[0].equalsIgnoreCase("help") && !args[0].equalsIgnoreCase("about") && string.contains(",")) {
-            String[] strings = string.split(",");
-            send.sendTitle(strings[0], strings[1]);
+            if (!(sender instanceof Player)) {
+                sender.sendMessage("This command can only be run by a player.");
+            } else {
+                String[] strings = string.split(",");
+                send.sendTitle(strings[0], strings[1]);
+            }
             return true;
 	} else if (cmd.getName().equalsIgnoreCase("yellt") && args.length != 0 && !string.contains(",")){
-            send.sendTitle(string, "");
+            if (!(sender instanceof Player)) {
+                sender.sendMessage("This command can only be run by a player.");
+            } else {
+                send.sendTitle(string, "");
+            }            
             return true;
 	} else if (cmd.getName().equalsIgnoreCase("yells") && args.length != 0 && !string.contains(",")){
-            send.sendTitle("", string);
+            if (!(sender instanceof Player)) {
+                sender.sendMessage("This command can only be run by a player.");
+            } else {
+                send.sendTitle("", string);
+            }                
             return true;
         } else if (cmd.getName().equalsIgnoreCase("yell") && args.length != 0 && args.length < 2 && (args[0].equalsIgnoreCase("help") || args[0].equalsIgnoreCase("about")) && !string.contains(",")) {
             if (args[0].equalsIgnoreCase("help")) {

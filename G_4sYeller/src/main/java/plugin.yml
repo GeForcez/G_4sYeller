@@ -1,28 +1,49 @@
-name: Yeller
+name: SimpleYeller
 main: com.GeForce.G_4sYeller.G_4sYeller
-version: 1.1
+version: 1.0
 
 commands:
     yell:
         usage: /yell [title],[subtitle]
-        permission: Yeller.yell
-        permission-message: You don't have Yell powers permission.
-        description: This command yells title and subtitle
+        permission: simpleyeller.yell
+        permission-message: You don't have Yell powers.
+        description: This command yells title and subtitle.
     yellt:
         usage: /yellt [title]
-        permission: Yeller.yellt
-        permission-message: You don't have Yell powers permission.
+        permission: simpleyeller.yellt
+        permission-message: You don't have Yell powers.
         description: This command yells a title.
     yells:
         usage: /yells [subtitle]
-        permission: Yeller.yells
-        permission-message: You don't have Yell powers permission.
+        permission: simpleyeller.yells
+        permission-message: You don't have Yell powers.
         description: This command yells a subtitle.
+    yellp:
+        usage: /yellp [player] [title], [subtitle]
+        permission: simpleyeller.yellp
+        permission-message: You don't have Yell powers.
+        description: This command yells a title and subtitle (player specific).
+    yelltp:
+        usage: /yelltp [player] [title]
+        permission: simpleyeller.yelltp
+        permission-message: You don't have Yell powers.
+        description: This command yells a title (player specific).
+    yellsp:
+        usage: /yellsp [player] [subtitle]
+        permission: simpleyeller.yellsp
+        permission-message: You don't have Yell powers permission.
+        description: This command yells a subtitle  (player specific).
 permissions:
-    Yeller.yell:
+    simpleyeller.yell:
         description: Gives permission to the yell command.
-    Yeller.yellt:
+    simpleyeller.yellt:
         description: Gives permission to the title yell command.
-    Yeller.yells:
-        description: Gives permission to the subtitle yell command. 
+    simpleyeller.yells:
+        description: Gives permission to the subtitle yell command.
+    simpleyeller.yellp:
+        description: Gives permission to the yell to player command. 
+    simpleyeller.yelltp:
+        description: Gives permission to the title to player yell command. 
+    simpleyeller.yellsp:
+        description: Gives permission to the subtitle to player yell command. 
         
